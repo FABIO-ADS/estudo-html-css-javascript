@@ -7,255 +7,255 @@ let palavraSecretaSorteada;
 
 const palavras = [
     palavra001 = {
-        nome : "IRLANDA",
-        categoria : "LUGARES"
+        nome: "IRLANDA",
+        categoria: "LUGARES"
     },
     palavra002 = {
-        nome : "EQUADOR",
-        categoria : "LUGARES"
+        nome: "EQUADOR",
+        categoria: "LUGARES"
     },
     palavra003 = {
         nome: "CHILE",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra004 = {
         nome: "INDONESIA",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra005 = {
         nome: "MALDIVAS",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra006 = {
         nome: "INGLATERRA",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra007 = {
         nome: "GROELANDIA",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra008 = {
         nome: "UZBEQUISTAO",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra009 = {
         nome: "INDONESIA",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra010 = {
         nome: "CREGUENHEM",
-        categoria:"LUGARES"
+        categoria: "LUGARES"
     },
     palavra011 = {
         nome: "BICICLETA",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra012 = {
         nome: "LANCHA",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra013 = {
         nome: "NAVIO",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra014 = {
         nome: "TELEFERICO",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra015 = {
         nome: "MOTOCICLETA",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra016 = {
         nome: "BARCO",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra017 = {
         nome: "AERONAVE",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra018 = {
         nome: "TREM",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra019 = {
         nome: "CAIAQUE",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra020 = {
         nome: "FUNICULAR",
-        categoria:"TRANSPORTE"
+        categoria: "TRANSPORTE"
     },
     palavra021 = {
         nome: "XICARA",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra022 = {
         nome: "MOEDA",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra023 = {
         nome: "ESPARADRAPO",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra024 = {
         nome: "SINO",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra025 = {
         nome: "CHUVEIRO",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra026 = {
         nome: "TAMBORETE",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra027 = {
         nome: "LAMPADA",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra028 = {
         nome: "BOCAL",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra029 = {
         nome: "CORTINA",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra030 = {
         nome: "LAPIS",
-        categoria:"OBJETOS"
+        categoria: "OBJETOS"
     },
     palavra031 = {
         nome: "MELANCIA",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra032 = {
         nome: "AMENDOIM",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra033 = {
         nome: "ESFIRRA",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra034 = {
         nome: "GOROROBA",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra035 = {
         nome: "JANTAR",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra036 = {
         nome: "SABOROSO",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra037 = {
         nome: "DESJEJUM",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra038 = {
         nome: "MASTIGAR",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra039 = {
         nome: "ENGOLIR",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra040 = {
         nome: "DOCERIA",
-        categoria:"ALIMENTOS"
+        categoria: "ALIMENTOS"
     },
     palavra040 = {
         nome: "DRAGAO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra041 = {
         nome: "GALINHA",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra042 = {
         nome: "PAVAO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra043 = {
         nome: "CAMELO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra044 = {
         nome: "PERU",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra045 = {
         nome: "ZEBRA",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra046 = {
         nome: "DROMEDARIO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra047 = {
         nome: "CALANGO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra048 = {
         nome: "SAGUI",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra049 = {
         nome: "LAGARTIXA",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra050 = {
         nome: "HIPOPOTAMO",
-        categoria:"ANIMAIS"
+        categoria: "ANIMAIS"
     },
     palavra051 = {
         nome: "A ERA DO GELO",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra052 = {
         nome: "HOMEM ARANHA",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra053 = {
         nome: "CASA MONSTRO",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra054 = {
         nome: "TELA QUENTE",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra055 = {
         nome: "STRANGER THINGS",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra056 = {
         nome: "O REI DO GADO",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra057 = {
         nome: "MULHER MARAVILHA",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra058 = {
         nome: "O INCRIVEL HULK",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra059 = {
         nome: "BOB ESPONJA",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     },
     palavra060 = {
         nome: "PANICO NA TV",
-        categoria:"TV E CINEMA"
+        categoria: "TV E CINEMA"
     }
 ]
 
 criarPalavraSecreta();
-function criarPalavraSecreta(){
+function criarPalavraSecreta() {
     const indexPalavra = parseInt(Math.random() * palavras.length);
-    
+
     palavraSecretaSorteada = palavras[indexPalavra].nome;
     palavraSecretaCategoria = palavras[indexPalavra].categoria;
 
@@ -265,14 +265,14 @@ function criarPalavraSecreta(){
 }
 
 montarPalavraNaTela();
-function montarPalavraNaTela(){
+function montarPalavraNaTela() {
     const categoria = document.getElementById("categoria");
     categoria.innerHTML = palavraSecretaCategoria;
 
     const palavraTela = document.getElementById("palavra-secreta");
     palavraTela.innerHTML = "";
 
-    for(i=0; i < palavraSecretaSorteada.length; i++){
+    for (i = 0; i < palavraSecretaSorteada.length; i++) {
         if (listaDinamica[i] == undefined) {
             listaDinamica[i] = "&nbsp"; // "&nbsp" => representa o espaço no HTML
             palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
@@ -281,16 +281,75 @@ function montarPalavraNaTela(){
         }
     }
 }
-    
-function verificaLetraEscolhida(letra){
-    if (tentativas > 0){
+
+function verificaLetraEscolhida(letra) {
+    if (tentativas > 0) {
         mudarStyleLetra("tecla-" + letra);
+        comparaListas(letra);
+        montarPalavraNaTela();
     }
-    
+
 }
 
-function mudarStyleLetra(tecla){
+function mudarStyleLetra(tecla) {
     document.getElementById(tecla).style.background = "#C71585";
     document.getElementById(tecla).style.color = "#ffffff";
 }
-    
+
+function comparaListas(letra) {
+
+    const posicao = palavraSecretaSorteada.indexOf(letra);
+
+    if (posicao < 0) {
+        tentativas--;
+        // aparecer imagem na forca
+        carregaImagemForca();
+        // verificar se ainda tem tentativas
+
+    } else {
+        for (i = 0; i < palavraSecretaSorteada.length; i++) {
+            if (palavraSecretaSorteada[i] == letra) {
+                listaDinamica[i] = letra;
+            }
+        }
+    }
+
+    let vitoria = true;
+
+    for (i = 0; i < palavraSecretaSorteada.length; i++) {
+        if (palavraSecretaSorteada[i] != listaDinamica[i]) {
+            vitoria = false;
+        }
+    }
+
+    if (vitoria == true) {
+        tentativas = 0;
+    }
+}
+
+function carregaImagemForca() {
+    switch (tentativas) {
+        case 5:
+            document.getElementById("imagem").style.background = "url('./img/forca01.png')";
+            break;
+        case 4:
+            document.getElementById("imagem").style.background = "url('./img/forca02.png')";
+            break;
+        case 3:
+            document.getElementById("imagem").style.background = "url('./img/forca03.png')";
+            break;
+        case 2:
+            document.getElementById("imagem").style.background = "url('./img/forca04.png')";
+            break;
+        case 1:
+            document.getElementById("imagem").style.background = "url('./img/forca05.png')";
+            break;
+        case 0:
+            document.getElementById("imagem").style.background = "url('./img/forca06.png')";
+            break;
+        default:
+            document.getElementById("imagem").style.background = "url('./img/forca.png')";
+            break;
+
+    }
+}
