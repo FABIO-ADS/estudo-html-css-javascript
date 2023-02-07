@@ -272,12 +272,26 @@ function montarPalavraNaTela() {
     const palavraTela = document.getElementById("palavra-secreta");
     palavraTela.innerHTML = "";
 
+
+
     for (i = 0; i < palavraSecretaSorteada.length; i++) {
         if (listaDinamica[i] == undefined) {
-            listaDinamica[i] = "&nbsp"; // "&nbsp" => representa o espaço no HTML
-            palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+
+            if (palavraSecretaSorteada[i] == " ") {
+                listaDinamica[i] = " ";
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letrasEspaco'>" + listaDinamica[i] + "</div>";
+            } else {
+                listaDinamica[i] = "&nbsp"; // "&nbsp" => representa o espaço no HTML
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+            }
+
         } else {
-            palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+            if (palavraSecretaSorteada[i] == " ") {
+                listaDinamica[i] = " ";
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letrasEspaco'>" + listaDinamica[i] + "</div>";
+            } else {
+                palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+            }
         }
     }
 }
@@ -309,10 +323,10 @@ function comparaListas(letra) {
         // aparecer imagem na forca
         carregaImagemForca();
 
-        if(tentativas == 0){
+        if (tentativas == 0) {
             abreModal("Ops!", "Não foi dessa vez... A palavra secreta era <br>" + palavraSecretaSorteada);
         }
-        
+
 
     } else {
         for (i = 0; i < palavraSecretaSorteada.length; i++) {
@@ -363,7 +377,7 @@ function carregaImagemForca() {
     }
 }
 
-function abreModal(titulo, mensagem){
+function abreModal(titulo, mensagem) {
 
     let modalTitulo = document.getElementById("exampleModalLabel");
     modalTitulo.innerText = titulo;
@@ -378,6 +392,6 @@ function abreModal(titulo, mensagem){
 }
 
 let btnReiniciar = document.querySelector("#btnReiniciar")
-btnReiniciar.addEventListener("click", function(){
+btnReiniciar.addEventListener("click", function () {
     location.reload();
 });
