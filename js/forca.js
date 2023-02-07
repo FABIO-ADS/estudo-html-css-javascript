@@ -1,5 +1,6 @@
 // Criar lista de palavras
 
+let jogarNovamente = true;
 let tentativas = 6;
 let listaDinamica = [];
 let palavraSecretaCategoria;
@@ -259,7 +260,6 @@ function criarPalavraSecreta() {
     palavraSecretaSorteada = palavras[indexPalavra].nome;
     palavraSecretaCategoria = palavras[indexPalavra].categoria;
 
-    console.log(palavraSecretaCategoria);
     console.log(palavraSecretaSorteada);
 
 }
@@ -302,16 +302,24 @@ function verificaLetraEscolhida(letra) {
     document.getElementById("tecla-" + letra).disabled = true;
 
     if (tentativas > 0) {
-        mudarStyleLetra("tecla-" + letra);
+        mudarStyleLetra("tecla-" + letra, false);
         comparaListas(letra);
         montarPalavraNaTela();
     }
 
 }
 
-function mudarStyleLetra(tecla) {
-    document.getElementById(tecla).style.background = "#C71585";
-    document.getElementById(tecla).style.color = "#ffffff";
+function mudarStyleLetra(tecla, condicaoCorLetra) {
+
+    if (condicaoCorLetra == false) {
+        document.getElementById(tecla).style.background = "#C71585";
+        document.getElementById(tecla).style.color = "#ffffff";
+    } else {
+        document.getElementById(tecla).style.background = "#008000";
+        document.getElementById(tecla).style.color = "#ffffff";
+    }
+
+
 }
 
 function comparaListas(letra) {
@@ -325,10 +333,12 @@ function comparaListas(letra) {
 
         if (tentativas == 0) {
             abreModal("Ops!", "Não foi dessa vez... A palavra secreta era <br>" + palavraSecretaSorteada);
+            piscarBotaoJogarNovamente();
         }
 
 
     } else {
+        mudarStyleLetra("tecla-" + letra, true);
         for (i = 0; i < palavraSecretaSorteada.length; i++) {
             if (palavraSecretaSorteada[i] == letra) {
                 listaDinamica[i] = letra;
@@ -347,7 +357,23 @@ function comparaListas(letra) {
     if (vitoria == true) {
         abreModal("Parabéns!!!!", "Você venceu!!!!");
         tentativas = 0;
+        piscarBotaoJogarNovamente();
     }
+}
+
+async function piscarBotaoJogarNovamente() {
+    while (jogarNovamente == true) {
+        document.getElementById("btnReiniciar").style.backgroundColor = 'red';
+        document.getElementById("btnReiniciar").style.scale = 1.2;
+        await atrasoMudarCorBtnReiniciar(250);
+        document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
+        document.getElementById("btnReiniciar").style.scale = 1;
+        await atrasoMudarCorBtnReiniciar(250);
+    }
+}
+
+async function atrasoMudarCorBtnReiniciar(tempo) {
+    return new Promise(x => setTimeout(x, tempo));
 }
 
 function carregaImagemForca() {
@@ -392,6 +418,8 @@ function abreModal(titulo, mensagem) {
 }
 
 let btnReiniciar = document.querySelector("#btnReiniciar")
+
 btnReiniciar.addEventListener("click", function () {
+    jogarNovamente = false;
     location.reload();
 });
