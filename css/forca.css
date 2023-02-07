@@ -67,6 +67,11 @@ body{
         font-family: 'Ubuntu', sans-serif;
         font-weight: 900;
     }
+
+    .teclas button:disabled{
+        cursor: not-allowed;
+    }
+
     .teclas button:hover {
         transform: scale(1.3);
     }
@@ -77,6 +82,7 @@ body{
         font-size: 1.2em;
     }
 
+    /* @medias */
     @media (min-width: 321px){
         .teclas button{
             width: 25px;
