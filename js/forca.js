@@ -1,5 +1,6 @@
 // Criar lista de palavras
 
+let listaDinamica = [];
 let palavraSecretaCategoria;
 let palavraSecretaSorteada;
 
@@ -260,6 +261,24 @@ function criarPalavraSecreta(){
     console.log(palavraSecretaCategoria);
     console.log(palavraSecretaSorteada);
 
+}
+
+montarPalavraNaTela();
+function montarPalavraNaTela(){
+    const categoria = document.getElementById("categoria");
+    categoria.innerHTML = palavraSecretaCategoria;
+
+    const palavraTela = document.getElementById("palavra-secreta");
+    palavraTela.innerHTML = "";
+
+    for(i=0; i < palavraSecretaSorteada.length; i++){
+        if (listaDinamica[i] == undefined) {
+            listaDinamica[i] = "&nbsp"; // "&nbsp" => representa o espaço no HTML
+            palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+        } else {
+            palavraTela.innerHTML = palavraTela.innerHTML + "<div class ='letras'>" + listaDinamica[i] + "</div>";
+        }
+    }
 }
     
     
