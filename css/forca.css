@@ -92,7 +92,47 @@ body{
         font-size: 1.2em;
     }
 
-    /* @medias */
+    #abreModalAddPalavra, #recarregar, #jogarAutomatico, #jogarNovamente{
+        position: fixed;
+        width: 70px;
+        height: 70px;
+        border: none;
+        outline: none;
+        border-radius: 70px;
+        font-size: 3em;
+        background-color: transparent;
+        color: #000;
+        cursor: pointer;
+    }
+
+    #abreModalAddPalavra{
+        bottom: 160px;
+        right: 5px;
+    }
+
+    #recarregar{
+        bottom: 80px;
+        right: 5px;
+    }
+
+    #jogarAutomatico{
+        bottom: 5px;
+        right: 5px;
+    }
+
+    #status{
+        position: fixed;
+        bottom: 10px;
+    }
+
+    #jogarNovamente{
+       bottom: 15px;
+       right: 30px;
+       transform: rotate(-90deg);
+       transform-origin: left top;
+    }
+
+    /*#region MEDIA QUERY*/
     @media (min-width: 321px){
         .teclas button{
             width: 25px;
@@ -164,3 +204,4 @@ body{
         }        
         
     }
+    /*#endregion*/
