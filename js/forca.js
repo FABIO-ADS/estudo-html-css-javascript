@@ -483,6 +483,14 @@ function adicionarPalavra() {
     // console.log("palavra = " + addPalavra);
     // console.log("categoria = " + addCategoria);
 
+
+    if (isNullOrWhiteSpace(
+        addPalavra) || isNullOrWhiteSpace(addCategoria) || 
+        addPalavra.length < 3 || addCategoria.length < 3) {
+        abreModal("ATENÇÃO!", " Palavra e/ou Categoria inválidos");
+        return;
+    }
+
     // pegar nova adicionada
     let palavra = {
         nome: addPalavra,
@@ -497,5 +505,11 @@ function adicionarPalavra() {
 
     //sortear novamente as palavras
 
+    console.log(palavras);
+
+}
+
+function isNullOrWhiteSpace(input){
+    return !input || !input.trim();
 }
 
