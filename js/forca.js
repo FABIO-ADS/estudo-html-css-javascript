@@ -90,7 +90,7 @@ function comparaListas(letra) {
 
         if (tentativas == 0) {
             abreModal("Ops!", "Não foi dessa vez... A palavra secreta era <br>" + palavraSecretaSorteada);
-            piscarBotaoJogarNovamente();
+            piscarBotaoJogarNovamente(true);
         }
 
 
@@ -114,20 +114,20 @@ function comparaListas(letra) {
     if (vitoria == true) {
         abreModal("Parabéns!!!!", "Você venceu!!!!");
         tentativas = 0;
-        piscarBotaoJogarNovamente();
+        piscarBotaoJogarNovamente(true);
     }
 }
 
-async function piscarBotaoJogarNovamente() {
-    while (jogarNovamente == true) {
-        document.getElementById("btnReiniciar").style.backgroundColor = 'red';
-        document.getElementById("btnReiniciar").style.scale = 1.2;
-        await atrasoMudarCorBtnReiniciar(250);
-        document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
-        document.getElementById("btnReiniciar").style.scale = 1;
-        await atrasoMudarCorBtnReiniciar(250);
-    }
-}
+// async function piscarBotaoJogarNovamente() {
+//     while (jogarNovamente == true) {
+//         document.getElementById("btnReiniciar").style.backgroundColor = 'red';
+//         document.getElementById("btnReiniciar").style.scale = 1.2;
+//         await atrasoMudarCorBtnReiniciar(250);
+//         document.getElementById("btnReiniciar").style.backgroundColor = 'yellow';
+//         document.getElementById("btnReiniciar").style.scale = 1;
+//         await atrasoMudarCorBtnReiniciar(250);
+//     }
+// }
 
 async function atrasoMudarCorBtnReiniciar(tempo) {
     return new Promise(x => setTimeout(x, tempo));
@@ -521,7 +521,30 @@ function sortear(){
             listaDinamica=[];
             criarPalavraSecreta();
             montarPalavraNaTela();
+
+            resetaTeclas();
             tentativas = 6;
+            piscarBotaoJogarNovamente(false);
+
          } 
+    }
+}
+
+
+function resetaTeclas(){
+    let teclas = document.querySelectorAll(".teclas > button");
+
+    teclas.forEach((x) => {
+        x.style.background = "#FFFFFF";
+        x.style.color = "#8B008B"; 
+        x.disabled = false;
+    });
+}
+
+function piscarBotaoJogarNovamente(querJogar){
+    if (querJogar == true) {
+        document.getElementById("jogarNovamente").style.display = "block";  
+    } else {
+        document.getElementById("jogarNovamente").style.display = "none";
     }
 }
