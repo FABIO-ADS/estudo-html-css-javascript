@@ -484,9 +484,7 @@ function adicionarPalavra() {
     // console.log("categoria = " + addCategoria);
 
 
-    if (isNullOrWhiteSpace(
-        addPalavra) || isNullOrWhiteSpace(addCategoria) || 
-        addPalavra.length < 3 || addCategoria.length < 3) {
+    if (isNullOrWhiteSpace(addPalavra) || isNullOrWhiteSpace(addCategoria) || addPalavra.length < 3 || addCategoria.length < 3) {
         abreModal("ATENÇÃO!", " Palavra e/ou Categoria inválidos");
         return;
     }
@@ -499,6 +497,7 @@ function adicionarPalavra() {
 
     // jogar na lista
     palavras.push(palavra);
+    sortear();
 
     document.getElementById("addPalavra").value = "";
     document.getElementById("addCategoria").value = "";
@@ -513,3 +512,16 @@ function isNullOrWhiteSpace(input){
     return !input || !input.trim();
 }
 
+
+function sortear(){
+    if (jogoAutomatico == true) {
+        location.reload();
+    } else {
+         if (palavras.length > 0) {
+            listaDinamica=[];
+            criarPalavraSecreta();
+            montarPalavraNaTela();
+            tentativas = 6;
+         } 
+    }
+}
