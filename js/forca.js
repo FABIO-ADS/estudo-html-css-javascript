@@ -129,10 +129,6 @@ function comparaListas(letra) {
 //     }
 // }
 
-async function atrasoMudarCorBtnReiniciar(tempo) {
-    return new Promise(x => setTimeout(x, tempo));
-}
-
 function carregaImagemForca() {
     switch (tentativas) {
         case 5:
@@ -177,8 +173,10 @@ function abreModal(titulo, mensagem) {
 let btnReiniciar = document.querySelector("#btnReiniciar")
 
 btnReiniciar.addEventListener("click", function () {
-    jogarNovamente = false;
-    location.reload();
+    abreModal("Fábio Melo", "https://www.linkedin.com/in/fabiomeloprogramer/");
+
+    // jogarNovamente = false;
+    // location.reload();
 });
 
 
@@ -191,14 +189,22 @@ function listaAutomatica() { // ativa o modo manual
         document.getElementById("abreModalAddPalavra").style.display = "block";
         document.getElementById("status").innerHTML = "Modo Manual";
 
+        document.getElementById("categoria").innerHTML = "";
+        document.getElementById("palavra-secreta").innerHTML = "";
+
+        palavraSecretaCategoria = "";
+        palavraSecretaSorteada = "";
+
 
     } else if (jogoAutomatico == false) { // ativa o modo automático
 
-        document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-pause-circle'></i>";
-        jogoAutomatico = true;
+        location.reload();
 
-        document.getElementById("abreModalAddPalavra").style.display = "none";
-        document.getElementById("status").innerHTML = "Modo Automático";
+        // document.getElementById("jogarAutomatico").innerHTML = "<i class='bx bx-pause-circle'></i>";
+        // jogoAutomatico = true;
+
+        // document.getElementById("abreModalAddPalavra").style.display = "none";
+        // document.getElementById("status").innerHTML = "Modo Automático";
     }
 }
 
@@ -508,17 +514,17 @@ function adicionarPalavra() {
 
 }
 
-function isNullOrWhiteSpace(input){
+function isNullOrWhiteSpace(input) {
     return !input || !input.trim();
 }
 
 
-function sortear(){
+function sortear() {
     if (jogoAutomatico == true) {
         location.reload();
     } else {
-         if (palavras.length > 0) {
-            listaDinamica=[];
+        if (palavras.length > 0) {
+            listaDinamica = [];
             criarPalavraSecreta();
             montarPalavraNaTela();
 
@@ -526,24 +532,24 @@ function sortear(){
             tentativas = 6;
             piscarBotaoJogarNovamente(false);
 
-         } 
+        }
     }
 }
 
 
-function resetaTeclas(){
+function resetaTeclas() {
     let teclas = document.querySelectorAll(".teclas > button");
 
     teclas.forEach((x) => {
         x.style.background = "#FFFFFF";
-        x.style.color = "#8B008B"; 
+        x.style.color = "#8B008B";
         x.disabled = false;
     });
 }
 
-function piscarBotaoJogarNovamente(querJogar){
+function piscarBotaoJogarNovamente(querJogar) {
     if (querJogar == true) {
-        document.getElementById("jogarNovamente").style.display = "block";  
+        document.getElementById("jogarNovamente").style.display = "block";
     } else {
         document.getElementById("jogarNovamente").style.display = "none";
     }
